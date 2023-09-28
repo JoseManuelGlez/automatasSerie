@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificador</title>
+</head>
+<body>
+    <h1>Verificador</h1>
+    <form method="post">
+        <label for="input_string">Ingrese una cadena:</label>
+        <input type="text" id="input_string" name="input_string" required>
+        <button type="submit">Verificar</button>
+    </form>
+    {% if result %}
+    <h2>Resultado:</h2>
+    <p>{{ cadena }}</p>
+    <br>
+        {% for item in result %}
+            <tr>{{ item }}</tr>
+        {% endfor %}
+
+    {% endif %}
+</body>
+</html>
